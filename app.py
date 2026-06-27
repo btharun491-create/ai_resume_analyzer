@@ -20,9 +20,28 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for modern, premium dark theme design
+# Custom CSS for modern, premium dark theme design and hiding Streamlit headers/logos
 st.markdown("""
 <style>
+    /* Hide Streamlit Header (which contains GitHub link, symbol, and Fork buttons) */
+    header {
+        visibility: hidden;
+        height: 0px !important;
+    }
+    
+    /* Hide Streamlit Main Menu and Footer */
+    #MainMenu {
+        visibility: hidden;
+    }
+    footer {
+        visibility: hidden;
+    }
+    
+    /* Adjust top padding since header is hidden */
+    .block-container {
+        padding-top: 2rem !important;
+    }
+
     /* Dark Theme Base styling */
     .stApp {
         background-color: #0d0f17;
