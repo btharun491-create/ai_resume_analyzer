@@ -1,0 +1,11 @@
+# Local environment configuration
+.env
+
+# Python caching
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Streamlit config
+.streamlit/
